@@ -1,0 +1,55 @@
+/*selector  {
+    propiedad: valor;
+}*/
+/*
+ORDEN JERARQUICO:
+
+-!import = no importa que, lo aplica sin criterio alguno.
+-id =  # clasificacion unica e irrepetible en el documento. EJ: DNI SE UTILIZA PARA ESTRUCTURAS PRINCIPALES
+-class = . clasificacion que podemos repetir en el documento.
+-selectores/etiquetas = etiquetas semanticas HTML
+
+
+
+*/
+
+/*ESTILOS RESET*/
+
+
+
+
+/*
+unidad de medida:
+fr = fraccion, si usas 1fr 1fr divide un espacio en 2 fracciones iguales usando el espacio maxima disponible
+
+*/
+
+
+*{ /*resetea todos los estilos de la web*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;/*limita las cajas al rango de las cosas que tienen adentro*/
+    
+  }
+  
+  ul{
+    display: inline-block; /*achica el tamano de las cajas y las hace del tamano del contenido que tiene dentro*/
+  }
+  li{
+    list-style: none;/*elimina los estilos de las listas*/
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  /*--------------------------------------------------------*/
+  
+  #body{ /*SIEMPRE DECLARAR LA MEDIDA DEL BODY CON UN NUMERO ESTANDAR*/
+    max-width: 100%;
+    /*background-size: cover; adapta la imagen al tamano de la pagina*/
+    background-color:white;
+  }

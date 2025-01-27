@@ -1,0 +1,488 @@
+/*selector  {
+    propiedad: valor;
+}*/
+/*
+ORDEN JERARQUICO:
+
+-!import = no importa que, lo aplica sin criterio alguno.
+-id =  # clasificacion unica e irrepetible en el documento. EJ: DNI SE UTILIZA PARA ESTRUCTURAS PRINCIPALES
+-class = . clasificacion que podemos repetir en el documento.
+-selectores/etiquetas = etiquetas semanticas HTML
+
+
+
+*/
+
+/*ESTILOS RESET*/
+
+
+
+
+/*
+unidad de medida:
+fr = fraccion, si usas 1fr 1fr divide un espacio en 2 fracciones iguales usando el espacio maxima disponible
+
+*/
+
+
+*{ /*resetea todos los estilos de la web*/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;/*limita las cajas al rango de las cosas que tienen adentro*/
+  
+}
+
+ul{
+  display: inline-block; /*achica el tamano de las cajas y las hace del tamano del contenido que tiene dentro*/
+}
+li{
+  list-style: none;/*elimina los estilos de las listas*/
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/*--------------------------------------------------------*/
+
+#body{ /*SIEMPRE DECLARAR LA MEDIDA DEL BODY CON UN NUMERO ESTANDAR*/
+  max-width: 100%;
+  /*background-size: cover; adapta la imagen al tamano de la pagina*/
+  background-color:white;
+}
+
+/*---------------------------HEADER-----------------------------*/
+#header a{
+  font-family: 'PT sans';
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+#header li{
+  padding-left: 50px;
+  margin-left: 10px;
+}
+/*---------------------------MAIN INDEX-----------------------------*/
+
+#main{
+  max-width: 100%;
+  width: 100%;
+  margin: 0; /*el margin de arriba y abajo esta en cero, pero con esto el margin left y right es adaptable*/
+   /*CUANDO SE PONEN 2 MEDIDAS EN UN MARGIN O EN UN PADDING: LA PRIMERA MEDIDA CAMBIA EL TOP Y EL BOTTOM
+      Y LA SEGUNDA MEDIDA EL LEFT Y RIGHT
+      EN ESTE CASO EL TOP Y BOTTOM ES 0 Y EL LEFT Y RIGHT ES AUTOMATICO.
+       
+      T-R-B-L(top-right-bottom-left)
+      */
+  padding-top: 10px;/*PARA QUE NO SE PISE EL NAV CON EL TEXTO DE LA PAGINA SE LE DA UN PADDING DE APENAS UN POCO MAS DEL TAMANO DEL HEADER*/
+  padding-bottom: 30px;
+  margin-top: 50px;
+  font-family:"PT Sans", serif;
+}
+
+.bestSeller{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 30px;
+  font-family:"PT Sans", serif;
+}
+
+.sectionBestSeller{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly ;
+  align-items: center;
+  text-align: center;
+  font-family: "PT Sans", serif;
+}
+
+.imgBestSeller{
+  width: 400px;
+  height: 430px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.novedades{
+  width: 100%;
+  height: 600px;
+
+}
+
+.imagenBottomMain{
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+}
+.sectionBestSeller{
+  font-weight: bold;
+
+}
+
+.imgBestSeller:hover{
+  padding-bottom: 10px;
+  padding-right: 5px;
+  box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.495);
+  transition: 0.2s;
+}
+
+/* Estilo inicial para la imagen */
+.imagen-fondo {
+  width: 100%;
+  height: 300px; /* ajusta según tus necesidades */
+  background-image: url('images/imagen_grande.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/*---------------------------FOOTER-----------------------------*/
+#footer { 
+  background-color: #343a40; 
+  color: #fff; 
+  padding: 20px 0; 
+  text-align:center;
+  font-family: "PT Sans", serif;
+}
+
+.footer-container { 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  align-items: center;
+}
+.footerInfo, .footerEnlaces, .footerRedes { 
+  margin-bottom: 20px; 
+  flex: 1 1 200px; 
+  max-width: 200px;
+}
+.footerInfo ul, .footerEnlaces ul { 
+  list-style: none; 
+  padding: 0;
+}
+.footerInfo li, .footerEnlaces li { 
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.footerInfo a, .footerEnlaces a, .logoFooter { 
+  color: #fff; 
+  text-decoration: none;
+}
+.footerRedes { 
+  display: flex; 
+  justify-content: center; 
+  gap: 20px;
+}
+.logoFooter { 
+  font-size: 30px;
+}
+.footerEnlaces ul{
+  display: grid;
+}
+
+/*----------------------------PRODUCTOS----------------------------*/
+
+.bannerProductos{
+  width: 100%;
+  height: 400px;
+}
+
+.containterFiltroProductos{
+  display: flex;
+  justify-content: left;
+  min-width: 200px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.containterFiltroProductos p {
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+  font-family: "PT Sans", serif;
+}
+
+.filtroProductos{
+border: none;
+appearance: none;
+padding: 0 30px 0 15px;
+width: 250px;
+font-size: 20px;
+text-align: center;
+font-family: "PT Sans", serif;
+}
+
+.rowProductos{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.productos{
+  width: 400px;
+  height: 430px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.productos:hover{
+  padding-bottom: 10px;
+  padding-right: 5px;
+  box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.495);
+  transition: 0.2s;
+}
+
+/*----------------------------MARCAS----------------------------*/
+.marcas{
+  width: 200px;
+  height: 180px;
+}
+.rowMarcas{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filtroLetraMarcas{
+  display: flex;
+}
+.filtroletraIndividual{
+  border: 1px solid;
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+/*----------------------------MARCAS----------------------------*/
+.bannerAcercaDe{
+  width: 100%;
+  height: 500px;
+}
+#main p{
+  font-family:"PT Sans", serif;
+  font-size: 20px;
+}
+
+/*----------------------------ABOUT----------------------------*/
+.container { 
+  background-color: #fff; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  width: 300px;
+}
+h2 { 
+  text-align: center; 
+  color: #333;
+}
+label { 
+  display: block; 
+  margin-top: 10px; 
+  color: #555;
+}
+.botonContacto { 
+  background-color: #4CAF50; 
+  color: white; 
+  padding: 10px 15px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-top: 10px; 
+  width: 100%; 
+} 
+
+.botonContacto:hover { 
+  background-color: #45a049; 
+}
+/*----------------------------CONTACTO----------------------------*/
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  font-family: "PT Sans", serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.botonContacto {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+} 
+
+.botonContacto:hover {
+  background-color: #45a049;
+}
+
+
+/*------------------responsive index--------------------------*/
+@media (max-width: 1200px) { 
+  .imgBestSeller, .productos { 
+    width: 70%; 
+    height: auto; 
+  } 
+  .bestSeller { 
+    font-size: 24px; 
+  } 
+  .productos { 
+    width: 250px; 
+    height: auto;
+}
+}
+  
+@media (max-width: 992px) { 
+  .imgBestSeller, .productos { 
+    width: 70%; height: auto; 
+  } 
+  .novedades { 
+    height: 400px; 
+  } 
+  .imagenBottomMain { 
+    content: url('../images/bannerBottomIndexMobile.gif'); 
+  }
+  .footerRedes { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); 
+    gap: 20px;
+  }
+  .productos { 
+    width: 200px; 
+    height: auto; 
+  } 
+  .bannerProductos { 
+    height: 300px; 
+  } 
+  .containterFiltroProductos { 
+   display: flex;
+   align-items: flex-start;
+   padding: 10px;
+   width: 100%;
+
+  }
+  .filtroProductos { 
+    width: 60%;
+    margin-top: 10px;
+
+  }
+} 
+    
+@media (max-width: 768px) { 
+  .imgBestSeller, .productos { 
+    width: 70%; 
+    height: auto; 
+  } 
+  .novedades { 
+    height: 300px; 
+  } 
+  .sectionBestSeller, .rowProductos, .rowMarcas { 
+    flex-direction: column; 
+    align-items: center; 
+  } 
+  .navbar-brand img { 
+    width: 50px; 
+    height: 50px; 
+  }
+  .footerInfo, .footerEnlaces, .footerRedes { 
+    margin-bottom: 10px; 
+  } 
+  .footer-container { 
+    flex-direction: column;
+  }
+  .productos { 
+    width: 400px; 
+    height: auto; 
+  } 
+  .bannerProductos { 
+    height: 200px; 
+  } 
+  .rowProductos { 
+    flex-direction: column; 
+    align-items: center; 
+  } 
+  .containterFiltroProductos { 
+    display: flex;
+    width: 100%;
+    padding: 10px;
+
+  }
+  .filtroProductos { 
+    width: 60%; 
+    text-align: center;
+
+  }
+} 
+ @media (max-width: 576px) {
+  .imgBestSeller, .productos {
+     width: 70%;
+     height: auto;
+  }
+  .novedades, .bannerProductos, .imagenBottomMain, .bannerAcercaDe {
+    height: auto;
+  }
+  .productos { 
+    width: 70%; 
+    height: auto; 
+  } 
+  .bannerProductos { 
+    height: 150px; 
+  } 
+  .containterFiltroProductos { 
+    display: flex;
+    padding: 10px;
+    width: 100%; 
+  } 
+  .filtroProductos { 
+    width: 60%; 
+    margin-top: 10px;
+  }
+}

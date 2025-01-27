@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*selector  {
     propiedad: valor;
 }*/
@@ -12,120 +13,161 @@ ORDEN JERARQUICO:
 
 
 */
-
 /*ESTILOS RESET*/
-
-
-
-
 /*
 unidad de medida:
 fr = fraccion, si usas 1fr 1fr divide un espacio en 2 fracciones iguales usando el espacio maxima disponible
 
 */
-
-
-*{ /*resetea todos los estilos de la web*/
+* { /*resetea todos los estilos de la web*/
   padding: 0;
   margin: 0;
-  box-sizing: border-box;/*limita las cajas al rango de las cosas que tienen adentro*/
-  
+  box-sizing: border-box; /*limita las cajas al rango de las cosas que tienen adentro*/
 }
 
-ul{
+ul {
   display: inline-block; /*achica el tamano de las cajas y las hace del tamano del contenido que tiene dentro*/
 }
-li{
-  list-style: none;/*elimina los estilos de las listas*/
+
+li {
+  list-style: none; /*elimina los estilos de las listas*/
   display: inline-block;
   justify-content: space-between;
   align-items: center;
 }
-a{
+
+a {
   text-decoration: none;
   color: black;
 }
 
 /*--------------------------------------------------------*/
-
-#body{ /*SIEMPRE DECLARAR LA MEDIDA DEL BODY CON UN NUMERO ESTANDAR*/
+#body { /*SIEMPRE DECLARAR LA MEDIDA DEL BODY CON UN NUMERO ESTANDAR*/
   max-width: 100%;
   /*background-size: cover; adapta la imagen al tamano de la pagina*/
-  background-color:white;
+  background-color: white;
 }
 
-/*---------------------------HEADER-----------------------------*/
-#header a{
-  font-family: 'PT sans';
+#header a {
+  font-family: "PT sans";
   font-size: 25px;
   padding-left: 10px;
 }
-
-#header li{
+#header li {
   padding-left: 50px;
   margin-left: 10px;
 }
-/*---------------------------MAIN-----------------------------*/
 
-#main{
+/*---------------------------FOOTER-----------------------------*/
+#footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "PT Sans", serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footerInfo, .footerEnlaces, .footerRedes {
+  margin-bottom: 20px;
+  flex: 1 1 200px;
+  max-width: 200px;
+}
+
+.footerInfo ul, .footerEnlaces ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerInfo li, .footerEnlaces li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footerInfo a, .footerEnlaces a, .logoFooter {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerRedes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logoFooter {
+  font-size: 30px;
+}
+
+.footerEnlaces ul {
+  display: grid;
+}
+
+/*---------------------------MAIN INDEX-----------------------------*/
+#main {
   max-width: 100%;
   width: 100%;
   margin: 0; /*el margin de arriba y abajo esta en cero, pero con esto el margin left y right es adaptable*/
-   /*CUANDO SE PONEN 2 MEDIDAS EN UN MARGIN O EN UN PADDING: LA PRIMERA MEDIDA CAMBIA EL TOP Y EL BOTTOM
-      Y LA SEGUNDA MEDIDA EL LEFT Y RIGHT
-      EN ESTE CASO EL TOP Y BOTTOM ES 0 Y EL LEFT Y RIGHT ES AUTOMATICO.
-       
-      T-R-B-L(top-right-bottom-left)
-      */
-  padding-top: 10px;/*PARA QUE NO SE PISE EL NAV CON EL TEXTO DE LA PAGINA SE LE DA UN PADDING DE APENAS UN POCO MAS DEL TAMANO DEL HEADER*/
+  /*CUANDO SE PONEN 2 MEDIDAS EN UN MARGIN O EN UN PADDING: LA PRIMERA MEDIDA CAMBIA EL TOP Y EL BOTTOM
+     Y LA SEGUNDA MEDIDA EL LEFT Y RIGHT
+     EN ESTE CASO EL TOP Y BOTTOM ES 0 Y EL LEFT Y RIGHT ES AUTOMATICO.
+
+     T-R-B-L(top-right-bottom-left)
+     */
+  padding-top: 10px; /*PARA QUE NO SE PISE EL NAV CON EL TEXTO DE LA PAGINA SE LE DA UN PADDING DE APENAS UN POCO MAS DEL TAMANO DEL HEADER*/
   padding-bottom: 30px;
   margin-top: 50px;
-  font-family:"PT Sans", serif;
+  font-family: "PT Sans", serif;
 }
 
-.bestSeller{
+.bestSeller {
   height: 100px;
   width: 100%;
   display: flex;
   padding-left: 5px;
   padding-top: 5px;
   font-size: 30px;
-  font-family:"PT Sans", serif;
+  font-family: "PT Sans", serif;
 }
 
-.sectionBestSeller{
+.sectionBestSeller {
   display: flex;
   width: 100%;
-  justify-content: space-evenly ;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   font-family: "PT Sans", serif;
 }
 
-.imgBestSeller{
+.imgBestSeller {
   width: 400px;
   height: 430px;
   border: 1px solid;
   border-radius: 3px;
 }
 
-.novedades{
+.novedades {
   width: 100%;
   height: 600px;
-
 }
 
-.imagenBottomMain{
+.imagenBottomMain {
   width: 100%;
   height: 300px;
   margin-top: 20px;
 }
-.sectionBestSeller{
-  font-weight: bold;
 
+.sectionBestSeller {
+  font-weight: bold;
 }
 
-.imgBestSeller:hover{
+.imgBestSeller:hover {
   padding-bottom: 10px;
   padding-right: 5px;
   box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.495);
@@ -136,72 +178,24 @@ a{
 .imagen-fondo {
   width: 100%;
   height: 300px; /* ajusta según tus necesidades */
-  background-image: url('images/imagen_grande.jpg');
+  background-image: url("images/imagen_grande.jpg");
   background-size: cover;
   background-position: center;
 }
 
-
-
-/*---------------------------FOOTER-----------------------------*/
-#footer { 
-  background-color: #343a40; 
-  color: #fff; 
-  padding: 20px 0; 
-  text-align:center;
-  font-family: "PT Sans", serif;
-}
-
-.footer-container { 
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: space-around; 
-  align-items: center;
-}
-.footerInfo, .footerEnlaces, .footerRedes { 
-  margin-bottom: 20px; 
-  flex: 1 1 200px; 
-  max-width: 200px;
-}
-.footerInfo ul, .footerEnlaces ul { 
-  list-style: none; 
-  padding: 0;
-}
-.footerInfo li, .footerEnlaces li { 
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-.footerInfo a, .footerEnlaces a, .logoFooter { 
-  color: #fff; 
-  text-decoration: none;
-}
-.footerRedes { 
-  display: flex; 
-  justify-content: center; 
-  gap: 20px;
-}
-.logoFooter { 
-  font-size: 30px;
-}
-.footerEnlaces ul{
-  display: grid;
-}
-
 /*----------------------------PRODUCTOS----------------------------*/
-
-.bannerProductos{
+.bannerProductos {
   width: 100%;
   height: 400px;
 }
 
-.containterFiltroProductos{
+.containterFiltroProductos {
   display: flex;
   justify-content: left;
   min-width: 200px;
   height: 50px;
   margin-bottom: 5px;
 }
-
 .containterFiltroProductos p {
   font-size: 20px;
   text-align: center;
@@ -210,31 +204,31 @@ a{
   font-family: "PT Sans", serif;
 }
 
-.filtroProductos{
-border: none;
-appearance: none;
-padding: 0 30px 0 15px;
-width: 250px;
-font-size: 20px;
-text-align: center;
-font-family: "PT Sans", serif;
+.filtroProductos {
+  border: none;
+  appearance: none;
+  padding: 0 30px 0 15px;
+  width: 250px;
+  font-size: 20px;
+  text-align: center;
+  font-family: "PT Sans", serif;
 }
 
-.rowProductos{
+.rowProductos {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
 }
 
-.productos{
+.productos {
   width: 400px;
   height: 430px;
   border: 1px solid;
   border-radius: 3px;
 }
 
-.productos:hover{
+.productos:hover {
   padding-bottom: 10px;
   padding-right: 5px;
   box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.495);
@@ -242,21 +236,23 @@ font-family: "PT Sans", serif;
 }
 
 /*----------------------------MARCAS----------------------------*/
-.marcas{
+.marcas {
   width: 200px;
   height: 180px;
 }
-.rowMarcas{
+
+.rowMarcas {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.filtroLetraMarcas{
+.filtroLetraMarcas {
   display: flex;
 }
-.filtroletraIndividual{
+
+.filtroletraIndividual {
   border: 1px solid;
   padding: 2px;
   padding-left: 5px;
@@ -265,47 +261,31 @@ font-family: "PT Sans", serif;
   margin-right: 5px;
 }
 
-/*----------------------------MARCAS----------------------------*/
-.bannerAcercaDe{
-  width: 100%;
-  height: 500px;
-}
-#main p{
-  font-family:"PT Sans", serif;
-  font-size: 20px;
-}
-
 /*----------------------------ABOUT----------------------------*/
-.container { 
-  background-color: #fff; 
-  padding: 20px; 
-  border-radius: 10px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-  width: 300px;
+.infoAbout {
+  text-align: center;
+  padding: 20px;
 }
-h2 { 
-  text-align: center; 
-  color: #333;
+.infoAbout h3 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
-label { 
-  display: block; 
-  margin-top: 10px; 
+.infoAbout p {
+  font-size: 18px;
+  line-height: 1.6;
   color: #555;
+  text-align: justify;
 }
-.botonContacto { 
-  background-color: #4CAF50; 
-  color: white; 
-  padding: 10px 15px; 
-  border: none; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  margin-top: 10px; 
-  width: 100%; 
-} 
 
-.botonContacto:hover { 
-  background-color: #45a049; 
+.bannerAcercaDe {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
 }
+
 /*----------------------------CONTACTO----------------------------*/
 .container {
   background-color: #fff;
@@ -358,131 +338,133 @@ textarea {
   font-size: 16px;
   margin-top: 10px;
   transition: background-color 0.3s ease;
-} 
+}
 
 .botonContacto:hover {
   background-color: #45a049;
 }
 
-
 /*------------------responsive index--------------------------*/
-@media (max-width: 1200px) { 
-  .imgBestSeller, .productos { 
-    width: 70%; 
-    height: auto; 
-  } 
-  .bestSeller { 
-    font-size: 24px; 
-  } 
-  .productos { 
-    width: 250px; 
+@media (max-width: 1200px) {
+  .imgBestSeller, .productos {
+    width: 70%;
     height: auto;
-}
-}
-  
-@media (max-width: 992px) { 
-  .imgBestSeller, .productos { 
-    width: 70%; height: auto; 
-  } 
-  .novedades { 
-    height: 400px; 
-  } 
-  .imagenBottomMain { 
-    content: url('../images/bannerBottomIndexMobile.gif'); 
   }
-  .footerRedes { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); 
+  .bestSeller {
+    font-size: 24px;
+  }
+  .productos {
+    width: 250px;
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  .imgBestSeller, .productos {
+    width: 70%;
+    height: auto;
+  }
+  .novedades {
+    height: 400px;
+  }
+  .imagenBottomMain {
+    content: url("../images/bannerBottomIndexMobile.gif");
+  }
+  .footerRedes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     gap: 20px;
   }
-  .productos { 
-    width: 200px; 
-    height: auto; 
-  } 
-  .bannerProductos { 
-    height: 300px; 
-  } 
-  .containterFiltroProductos { 
-   display: flex;
-   align-items: flex-start;
-   padding: 10px;
-   width: 100%;
-
+  .productos {
+    width: 200px;
+    height: auto;
   }
-  .filtroProductos { 
+  .bannerProductos {
+    height: 300px;
+  }
+  .containterFiltroProductos {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
+  }
+  .filtroProductos {
     width: 60%;
     margin-top: 10px;
-
   }
-} 
-    
-@media (max-width: 768px) { 
-  .imgBestSeller, .productos { 
-    width: 70%; 
-    height: auto; 
-  } 
-  .novedades { 
-    height: 300px; 
-  } 
-  .sectionBestSeller, .rowProductos, .rowMarcas { 
-    flex-direction: column; 
-    align-items: center; 
-  } 
-  .navbar-brand img { 
-    width: 50px; 
-    height: 50px; 
+}
+@media (max-width: 768px) {
+  .imgBestSeller, .productos {
+    width: 70%;
+    height: auto;
   }
-  .footerInfo, .footerEnlaces, .footerRedes { 
-    margin-bottom: 10px; 
-  } 
-  .footer-container { 
+  .novedades {
+    height: 300px;
+  }
+  .sectionBestSeller, .rowProductos, .rowMarcas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-brand img {
+    width: 50px;
+    height: 50px;
+  }
+  .footerInfo, .footerEnlaces, .footerRedes {
+    margin-bottom: 10px;
+  }
+  .footer-container {
     flex-direction: column;
   }
-  .productos { 
-    width: 400px; 
-    height: auto; 
-  } 
-  .bannerProductos { 
-    height: 200px; 
-  } 
-  .rowProductos { 
-    flex-direction: column; 
-    align-items: center; 
-  } 
-  .containterFiltroProductos { 
+  .productos {
+    width: 400px;
+    height: auto;
+  }
+  .bannerProductos {
+    height: 200px;
+  }
+  .rowProductos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .containterFiltroProductos {
     display: flex;
     width: 100%;
     padding: 10px;
-
   }
-  .filtroProductos { 
-    width: 60%; 
+  .filtroProductos {
+    width: 60%;
     text-align: center;
-
   }
-} 
- @media (max-width: 576px) {
+  .bannerAcercaDe {
+    height: 200px;
+  }
+  .infoAbout p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
   .imgBestSeller, .productos {
-     width: 70%;
-     height: auto;
+    width: 70%;
+    height: auto;
   }
   .novedades, .bannerProductos, .imagenBottomMain, .bannerAcercaDe {
     height: auto;
   }
-  .productos { 
-    width: 70%; 
-    height: auto; 
-  } 
-  .bannerProductos { 
-    height: 150px; 
-  } 
-  .containterFiltroProductos { 
+  .productos {
+    width: 70%;
+    height: auto;
+  }
+  .bannerProductos {
+    height: 150px;
+  }
+  .containterFiltroProductos {
     display: flex;
     padding: 10px;
-    width: 100%; 
-  } 
-  .filtroProductos { 
-    width: 60%; 
+    width: 100%;
+  }
+  .filtroProductos {
+    width: 60%;
     margin-top: 10px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
