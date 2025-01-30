@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*selector  {
     propiedad: valor;
 }*/
@@ -58,57 +57,6 @@ a {
   margin-left: 10px;
 }
 
-/*---------------------------FOOTER-----------------------------*/
-#footer {
-  background-color: #343a40;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  font-family: "PT Sans", serif;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.footerInfo, .footerEnlaces, .footerRedes {
-  margin-bottom: 20px;
-  flex: 1 1 200px;
-  max-width: 200px;
-}
-
-.footerInfo ul, .footerEnlaces ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footerInfo li, .footerEnlaces li {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.footerInfo a, .footerEnlaces a, .logoFooter {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footerRedes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.logoFooter {
-  font-size: 30px;
-}
-
-.footerEnlaces ul {
-  display: grid;
-}
-
 /*---------------------------MAIN INDEX-----------------------------*/
 #main {
   max-width: 100%;
@@ -134,6 +82,7 @@ a {
   padding-top: 5px;
   font-size: 30px;
   font-family: "PT Sans", serif;
+  backface-visibility: hidden;
 }
 
 .sectionBestSeller {
@@ -152,6 +101,21 @@ a {
   border-radius: 3px;
 }
 
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: whitesmoke;
+}
+
 .novedades {
   width: 100%;
   height: 600px;
@@ -160,7 +124,9 @@ a {
 .imagenBottomMain {
   width: 100%;
   height: 300px;
-  margin-top: 20px;
+  margin-top: 70px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .sectionBestSeller {
@@ -174,15 +140,39 @@ a {
   transition: 0.2s;
 }
 
-/* Estilo inicial para la imagen */
-.imagen-fondo {
-  width: 100%;
-  height: 300px; /* ajusta según tus necesidades */
-  background-image: url("images/imagen_grande.jpg");
-  background-size: cover;
-  background-position: center;
+.slider {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: white;
+  padding-top: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
+.brands {
+  display: flex;
+  animation: slide 20s linear infinite;
+  list-style: none;
+}
+
+.brandLogo {
+  flex: 0 0 auto;
+  margin: 0 20px;
+}
+
+.brandLogo img {
+  max-height: 150px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* Estilo inicial para la imagen */
 /*----------------------------PRODUCTOS----------------------------*/
 .bannerProductos {
   width: 100%;
@@ -239,6 +229,16 @@ a {
 .marcas {
   width: 200px;
   height: 180px;
+  border: 1px, solid;
+  border-radius: 5px;
+}
+
+.marcas:hover {
+  padding-bottom: 10px;
+  padding-right: 5px;
+  box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.495);
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .rowMarcas {
@@ -253,12 +253,20 @@ a {
 }
 
 .filtroletraIndividual {
-  border: 1px solid;
+  border: none;
   padding: 2px;
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 3px;
   margin-right: 5px;
+  font-style: "PT sans";
+  background-color: white;
+}
+
+.filtroletraIndividual:hover {
+  color: white;
+  background-color: grey;
+  transition: 0.5s;
 }
 
 /*----------------------------ABOUT----------------------------*/
@@ -342,6 +350,57 @@ textarea {
 
 .botonContacto:hover {
   background-color: #45a049;
+}
+
+/*---------------------------FOOTER-----------------------------*/
+#footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "PT Sans", serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footerInfo, .footerEnlaces, .footerRedes {
+  margin-bottom: 20px;
+  flex: 1 1 200px;
+  max-width: 200px;
+}
+
+.footerInfo ul, .footerEnlaces ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerInfo li, .footerEnlaces li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footerInfo a, .footerEnlaces a, .logoFooter {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerRedes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logoFooter {
+  font-size: 30px;
+}
+
+.footerEnlaces ul {
+  display: grid;
 }
 
 /*------------------responsive index--------------------------*/

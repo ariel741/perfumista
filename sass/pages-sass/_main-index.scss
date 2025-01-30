@@ -1,6 +1,6 @@
 /*---------------------------MAIN INDEX-----------------------------*/
 
-#main{
+  #main{
     max-width: 100%;
     width: 100%;
     margin: 0; /*el margin de arriba y abajo esta en cero, pero con esto el margin left y right es adaptable*/
@@ -24,7 +24,9 @@
     padding-top: 5px;
     font-size: 30px;
     font-family: "PT Sans", serif;
+    backface-visibility: hidden;
   }
+
   
   .sectionBestSeller{
     display: flex;
@@ -41,7 +43,21 @@
     border: 1px solid;
     border-radius: 3px;
   }
-  
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: whitesmoke;
+}
   .novedades{
     width: 100%;
     height: 600px;
@@ -51,7 +67,9 @@
   .imagenBottomMain{
     width: 100%;
     height: 300px;
-    margin-top: 20px;
+    margin-top: 70px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
   }
   .sectionBestSeller{
     font-weight: bold;
@@ -64,12 +82,46 @@
     box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.495);
     transition: 0.2s;
   }
+
+
+  .slider {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: white;
+    padding-top: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .brands {
+    display: flex;
+    animation: slide 20s linear infinite;
+    list-style: none;
+  }
+
+  .brandLogo {
+    flex: 0 0 auto;
+    margin: 0 20px;
+  }
+
+  .brandLogo img {
+    max-height: 150px;
+  }
+
+  @keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+  }
   
   /* Estilo inicial para la imagen */
-  .imagen-fondo {
-    width: 100%;
-    height: 300px; /* ajusta según tus necesidades */
-    background-image: url('images/imagen_grande.jpg');
-    background-size: cover;
-    background-position: center;
-  }
+  // .imagen-fondo {
+  //   width: 100%;
+  //   height: 300px; /* ajusta según tus necesidades */
+  //   background-image: url('images/imagen_grande.jpg');
+  //   background-size: cover;
+  //   background-position: center;
+  // }

@@ -2,6 +2,15 @@
 .marcas{
     width: 200px;
     height: 180px;
+    border: 1px, solid;
+    border-radius: 5px;
+  }
+  .marcas:hover{
+    padding-bottom: 10px;
+    padding-right: 5px;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.495);
+    transition: 0.2s;
+    cursor: pointer;
   }
   .rowMarcas{
     display: flex;
@@ -14,10 +23,17 @@
     display: flex;
   }
   .filtroletraIndividual{
-    border: 1px solid;
+    border: none;
     padding: 2px;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 3px;
     margin-right: 5px;
+    font-style: 'PT sans';
+    background-color: white;
+  }
+  .filtroletraIndividual:hover{
+    color: white;
+    background-color: grey;
+    transition: 0.5s;
   }
